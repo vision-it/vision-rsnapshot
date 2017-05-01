@@ -1,0 +1,6 @@
+---
+vision_rsnapshot::hosts:
+  example.com:
+    backup_defaults: false
+    backup:
+      '/var/': './'
