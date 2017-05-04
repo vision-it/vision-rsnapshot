@@ -1,8 +1,14 @@
 ---
 fixtures:
-    repositories:
-        concat: "https://github.com/puppetlabs/puppetlabs-concat"
-        stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib"
-        rsnapshot: "https://github.com/loomsen/puppet-rsnapshot"
-    symlinks:
-        vision_rsnapshot: '#{source_dir}'
+  repositories:
+    stdlib:
+      ref: "4.12.0"
+      repo: "https://github.com/puppetlabs/puppetlabs-stdlib"
+    concat:
+      ref: "2.2.0"
+      repo: "https://github.com/puppetlabs/puppetlabs-concat"
+    rsnapshot:
+      ref: "1.2.2"
+      repo: "https://github.com/loomsen/puppet-rsnapshot"
+  symlinks:
+    vision_rsnapshot: '#{source_dir}'
