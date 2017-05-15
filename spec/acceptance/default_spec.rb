@@ -25,6 +25,7 @@ describe 'vision_rsnapshot' do
     describe file('/etc/rsnapshot/example.com.rsnapshot.conf') do
       it { is_expected.to exist }
       its(:content) { is_expected.to match 'backup' }
+      its(:content) { is_expected.to match 'something' }
     end
   end
 end

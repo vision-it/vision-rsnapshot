@@ -1,6 +1,7 @@
 ---
 vision_rsnapshot::hosts:
   example.com:
+    cmd_postexec : '/root/something'
     backup_defaults: false
     backup:
       '/var/': './'
