@@ -16,6 +16,9 @@ describe 'vision_rsnapshot' do
     describe package('rsnapshot') do
       it { is_expected.to be_installed }
     end
+    describe package('util-linux') do
+      it { is_expected.to be_installed }
+    end
   end
   context 'files provisioned' do
     describe file('/etc/rsnapshot.conf') do
@@ -26,6 +29,11 @@ describe 'vision_rsnapshot' do
       it { is_expected.to exist }
       its(:content) { is_expected.to match 'backup' }
       its(:content) { is_expected.to match 'something' }
+    end
+    describe file('/usr/local/sbin/rtcwake_shutdown') do
+      it { is_expected.to exist }
+      its(:content) { is_expected.to match 'MANAGED BY PUPPET' }
+      its(:content) { is_expected.to match 'rtcwake' }
     end
   end
 end

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# THIS FILE IS MANAGED BY PUPPET
+
+# Script to shutdown and wake for offline backups
+# Uses UTC (00:30 UTC = 2:30 Uhr) - For no reason
+
+NEXTBOOT=$(date -u +%s -d 'tomorrow 00:30')
+
+# Writes the current state of the /backups to another server
+ls -lr --full-time /backup/vision06.iis.fhg.de > /tmp/offline-backup-list
+du -sh /backup >> /tmp/offline-backup-list
+scp -q /tmp/offline-backup-list vision06:/vision
+
+/usr/sbin/rtcwake -m off -t $NEXTBOOT
