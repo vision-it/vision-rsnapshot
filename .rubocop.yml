@@ -1,9 +1,11 @@
 require: rubocop-rspec
 AllCops:
-  TargetRubyVersion: 1.9
+  TargetRubyVersion: 2.3
   Include:
     - ./**/*.rb
   Exclude:
+    - Rakefile
+    - Gemfile
     - files/**/*
     - lib/**/*
     - vendor/**/*
@@ -11,10 +13,10 @@ AllCops:
     - pkg/**/*
     - spec/fixtures/**/*
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: False
 
-Style/FirstParameterIndentation:
+Layout/FirstParameterIndentation:
   Enabled: False
 
 Metrics/BlockLength:
