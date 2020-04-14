@@ -2,9 +2,6 @@
 
 [![Build Status](https://travis-ci.org/vision-it/vision-rsnapshot.svg?branch=production)](https://travis-ci.org/vision-it/vision-rsnapshot)
 
-
-## Parameter
-
 ## Usage
 
 Include in the *Puppetfile*:

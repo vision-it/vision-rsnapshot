@@ -1,14 +1,12 @@
 # Class: vision_rsnapshot
 # ===========================
 #
+# Manage rsnapshot config and rtcwake_shutdown (offline backup)
+#
 # Parameters
 # ----------
 #
-# Examples
-# --------
-#
-# @example
-# contain ::vision_rsnapshot
+# @param hosts List of hosts/paths to rsnapshot
 #
 
 class vision_rsnapshot (
